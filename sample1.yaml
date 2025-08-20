@@ -1,0 +1,113 @@
+rules:
+  # PING RULES
+  - name: "Ping To Monitored IP"
+    description: "ICMP Echo Request (ping) to monitored IP"
+    severity: "medium"
+    protocol: "icmp"
+    src_ip: "any"
+    dst_ip: "10.10.114.132"
+    icmp_type: 8
+  
+  # SSH CONNECTION RULES
+  - name: "SSH Connection"
+    description: "SSH connection to any host"
+    severity: "low"
+    protocol: "tcp"
+    dst_port: 22
+    src_ip: "any"
+    dst_ip: "any"
+  
+  - name: "SSH To Monitored IP"
+    description: "SSH connection to monitored IP"
+    severity: "medium"
+    protocol: "tcp"
+    dst_port: 22
+    src_ip: "any" 
+    dst_ip: "any"
+  
+  # FTP CONNECTION RULES
+  - name: "FTP Connection"
+    description: "FTP connection to any host"
+    severity: "low" 
+    protocol: "tcp"
+    dst_port: 21
+    src_ip: "any"
+    dst_ip: "any"
+  
+  - name: "FTP To Monitored IP"
+    description: "FTP connection to monitored IP"
+    severity: "medium"
+    protocol: "tcp"
+    dst_port: 21
+    src_ip: "any"
+    dst_ip: "any"
+    
+  # TELNET CONNECTION RULES
+  - name: "Telnet Connection"
+    description: "Telnet connection to any host"
+    severity: "medium"
+    protocol: "tcp" 
+    dst_port: 23
+    src_ip: "any"
+    dst_ip: "any"
+  
+  - name: "Telnet To Monitored IP"
+    description: "Telnet connection to monitored IP"
+    severity: "high"
+    protocol: "tcp"
+    dst_port: 23
+    src_ip: "any"
+    dst_ip: "any"
+  
+  # HTTP/HTTPS RULES
+  - name: "HTTP To Monitored IP"
+    description: "HTTP connection to monitored IP"
+    severity: "low"
+    protocol: "tcp"
+    dst_port: 80
+    src_ip: "any"
+    dst_ip: "any"
+  
+  - name: "HTTPS To Monitored IP"
+    description: "HTTPS connection to monitored IP"
+    severity: "low"
+    protocol: "tcp"
+    dst_port: 443
+    src_ip: "any"
+    dst_ip: "any"
+  
+  # DATABASE ACCESS RULES
+  - name: "MySQL Connection"
+    description: "MySQL database connection"
+    severity: "medium"
+    protocol: "tcp"
+    dst_port: 3306
+    src_ip: "any"
+    dst_ip: "any"
+  
+  # REMOTE DESKTOP RULES
+  - name: "RDP Connection"
+    description: "Remote Desktop Protocol connection"
+    severity: "medium"
+    protocol: "tcp"
+    dst_port: 3389
+    src_ip: "any" 
+    dst_ip: "any"
+  
+  # DNS RULES
+  - name: "DNS Query"
+    description: "DNS query detected"
+    severity: "low"
+    protocol: "udp"
+    dst_port: 53
+    src_ip: "any"
+    dst_ip: "any"
+  
+  # SMB/WINDOWS SHARING RULES
+  - name: "SMB Connection"
+    description: "Windows file sharing connection"
+    severity: "medium"
+    protocol: "tcp"
+    dst_port: 445
+    src_ip: "any"
+    dst_ip: "any"
