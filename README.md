@@ -43,6 +43,7 @@ sudo python3 ids1.py
 
 ⚠️ The IDS script requires root privileges to capture network traffic.
 
+⚠️ The IDS Tool requires raw packet capturing, which is currently supported only on Linux systems.
 
 🧭 Unified CLI Menu (Recommended)
 
@@ -51,21 +52,6 @@ python3 cli.py
 
 This will display a menu where you can choose between CryptoFile, SecureWipe, and the IDS Tool.
 
-## 📂 Project Structure
-cli.py                                                         # Main CLI launcher  
-crypto.py                                                      # CryptoFile implementation  
-Securewipe.py                                                  # Secure deletion tool  
-ids1.py                                                        # Simple Intrusion Detection System  
-sample1.yaml                                                   # Example config / rule file  
-requirements.txt                                               # Python dependencies  
-README.md                                                      # Documentation  
- 
-
-## ✅ Compatibility
-Tool	              Windows	Linux
-CryptoFile	           ✅	   ✅
-SecureWipe	           ✅	   ✅
-IDS Tool	             ❌   ✅
 
 ⚠️ The IDS Tool requires raw packet capturing, which is currently supported only on Linux systems.
 
